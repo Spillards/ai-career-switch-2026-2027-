@@ -1,7 +1,7 @@
 # AI Career Switch 2026–2027
 
 ## Goal
-Mijn in 10 maanden omvormen van een ambtenaar tot een AI Consultant.
+In 10 maanden een carrièreswitch mogelijk maken van ambtenaar tot AI Consultant / AI Generalist.
 ## Background
 ## Learning roadmap
 ## Portfolio principles
