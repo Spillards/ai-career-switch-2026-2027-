@@ -9,3 +9,4 @@ In 10 maanden een carrièreswitch mogelijk maken van ambtenaar tot AI Consultant
 ## Skills being developed
 ## Repository structure
 ## Progress
+Informatie over mijzelf: Ik heb het meer voor katten dan voor honden.
