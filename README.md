@@ -8,4 +8,5 @@ In 10 maanden een carrièreswitch mogelijk maken van ambtenaar tot AI Consultant
 ## Projects
 ## Skills being developed
 ## Repository structure
-## Progress Informatie over mijzelf: Gewoon even een test.
+## Progress Informatie over mijzelf:
+Gewoon even een test.
