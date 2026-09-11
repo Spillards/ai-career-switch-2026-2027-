@@ -1,0 +1,26 @@
+[
+  {
+    "customer_id": 1001,
+    "tenure_months": 2,
+    "plan": "Basic",
+    "monthly_spend": 25,
+    "support_tickets_90d": 1,
+    "churned": false
+  },
+  {
+    "customer_id": 1002,
+    "tenure_months": 8,
+    "plan": "Advanced",
+    "monthly_spend": 50,
+    "support_tickets_90d": 2,
+    "churned": false
+  },
+  {
+    "customer_id": 1003,
+    "tenure_months": 22,
+    "plan": "Pro",
+    "monthly_spend": 100,
+    "support_tickets_90d": 3,
+    "churned": true
+  }
+]

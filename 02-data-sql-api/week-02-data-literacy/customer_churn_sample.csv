@@ -1,0 +1,11 @@
+customer_id;tenure_months;plan;monthly_spend;support_tickets_90d;churned
+1001;2;Basic;25;1;false
+1002;8;Advanced;50;2;false
+1003;22;Pro;100;3;true
+1004;14;Basic;25;4;false
+1005;17;Advanced;50;5;false
+1006;33;Pro;100;8;false
+1007;5;Basic;25;4;true
+1008;25;Advanced;50;1;true
+1009;37;Pro;100;0;false
+1010;11;Advanced;50;7;false
