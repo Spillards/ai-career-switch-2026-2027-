@@ -13,6 +13,7 @@
 
 - Never commit secrets, API keys, credentials, tokens, or personal or confidential data.
 - Never place Notion links or Notion page references in GitHub files. GitHub artefacts must remain self-contained; links from Notion to GitHub are allowed.
+- Do not create or maintain a glossary, terminology list, or glossary-building task in GitHub. Glossary management belongs exclusively in the existing Central Glossary in Notion.
 - Use meaningful commit messages.
 - Keep the README and setup, usage, and test instructions current.
 - Preserve the agreed repository structure unless a refactor is justified and documented.
