@@ -12,6 +12,7 @@
 ## Repository rules
 
 - Never commit secrets, API keys, credentials, tokens, or personal or confidential data.
+- Never place Notion links or Notion page references in GitHub files. GitHub artefacts must remain self-contained; links from Notion to GitHub are allowed.
 - Use meaningful commit messages.
 - Keep the README and setup, usage, and test instructions current.
 - Preserve the agreed repository structure unless a refactor is justified and documented.

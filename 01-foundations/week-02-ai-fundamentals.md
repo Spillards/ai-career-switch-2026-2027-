@@ -9,7 +9,6 @@ I then completed **Data readiness review v0.1**. The review identifies `churned`
 Evidence:
 
 - [Data quality cases and Data readiness review v0.1](../02-data-sql-api/data-quality-cases.md)
-- [Data Literacy notes and reviewed exercise in Notion](https://app.notion.com/p/3d0f403f085b8157ba5bc1600006b021)
 ## Business problem vs AI solution
 ## When AI is NOT a good solution
 ## Tests / self-assessment
