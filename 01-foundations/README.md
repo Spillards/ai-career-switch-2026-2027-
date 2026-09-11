@@ -14,5 +14,6 @@ Foundational evidence from the first phase of my AI Career Switch 2026–2027.
 ## Week evidence
 
 - [Week 1 — Baseline & Foundations](./week-01-evidence.md)
+- [Week 2 — AI Fundamentals for Business](./week-02-ai-fundamentals.md)
 
 [Back to repository root](../README.md)
