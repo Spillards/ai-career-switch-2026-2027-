@@ -1,6 +1,6 @@
 # Block 2 — AI Fundamentals for Business
 
-**Status:** Evidence page complete; Block 2 review is in progress and formal closure has not been requested.
+**Status:** Block 2 closed on 17 September 2026 after the explicit transition request. The evidence below is learning and draft portfolio evidence, not a production deployment.
 
 ## Block goal
 
@@ -76,7 +76,7 @@ The fictitious churn data-quality exercise demonstrates detection of five seeded
 
 Completed exercise evidence is linked above. The one-pager is a reviewed consulting draft, not proof that a production system has been built or validated. No claims about model accuracy, business impact or deployment are made without measurements.
 
-The Block 2 assessment was completed and scored 6.5/10. No red error was recorded on the four named core topics. The original 8/10 threshold is being treated as an ambitious learning target in the block review, with targeted weak spots carried forward. This evidence page does not close Block 2 or claim independent mastery.
+The Block 2 assessment was completed and scored 6.5/10. No red error was recorded on the four named core topics. The original 8/10 threshold was recalibrated as an ambitious learning target in the completed block review. Targeted weak spots are carried into applied Block 3 work. Formal closure does not claim independent mastery.
 
 ## Remaining weak spots
 
