@@ -1,55 +1,67 @@
 # AI Career Switch 2026–2027
 
 ## Goal
-Build the skills and portfolio required to transition into an
-AI Business Analyst / Junior AI Consultant / GenAI Consultant role,
-with a longer-term path toward AI Business Architecture.
+
+Build the skills and portfolio required to transition into an AI Business Analyst, Junior AI Consultant or GenAI Consultant role, with a longer-term path toward AI Business Architecture.
 
 ## Background
-Business Analysis background with extensive public-sector experience.
-This repository documents my structured transition into AI consulting,
-technical AI solution analysis and AI-enabled business transformation.
+
+Business Analysis background with extensive public-sector experience. This repository documents a structured transition into AI consulting, technical AI solution analysis and AI-enabled business transformation.
 
 ## Learning roadmap
+
 The programme runs from August 2026 to June 2027 and progressively covers:
 
 - AI and LLM foundations
-- Data, SQL and APIs
+- data, SQL and APIs
 - Python fundamentals
-- Automation
+- automation
 - RAG and evaluations
 - AI agents and MCP
 - Azure
 - AI governance and architecture
-  
+
+The AI curriculum is executed in content blocks of five actual study days. A future folder or planned topic is not evidence that the corresponding block has started or been completed.
+
 ## Portfolio principles
-Evidence over claims.
 
-Portfolio work should demonstrate:
+**Evidence over claims.**
 
-Problem → requirements → design → implementation → testing/evaluation
-→ failures → limitations → lessons learned → reproducibility.
+Portfolio work should show:
 
-## Projects
-Portfolio projects will be added progressively as the programme develops.
+Problem → requirements → design → implementation → testing/evaluation → failures → limitations → lessons learned → reproducibility.
+
+Completed evidence, reviewed drafts and planned scope are labelled separately.
+
+## Current evidence
+
+- [Block 1 — Baseline & Foundations](./01-foundations/week-01-evidence.md) — completed
+- [Block 2 — AI Fundamentals for Business](./01-foundations/week-02-ai-fundamentals.md) — in progress
+- [When AI Is Not a Good Solution](./01-foundations/when-ai-is-not-a-good-solution.md) — reviewed draft v0.2
+- [Data quality cases and Data readiness review v0.1](./02-data-sql-api/data-quality-cases.md) — completed exercise evidence
 
 ## Skills being developed
+
 - AI solution analysis
-- Business problem framing
+- business problem framing
 - Git and GitHub
-- Data literacy
-- Technical communication
+- data literacy
+- technical communication
 - AI governance
-- Solution architecture fundamentals
+- solution architecture fundamentals
 
 ## Repository structure
-- `01-foundations` — AI, solution-choice and foundational evidence
-- `02-data-sql-api` — data, SQL and APIs
-- `03-automation` — automation
-- `04-rag-agents` — RAG, evals and agents
-- `05-governance-architecture` — governance and architecture
-- `portfolio-projects` — integrated portfolio projects
-- `docs` — supporting documentation
+
+- [01-foundations](./01-foundations/) — AI, solution choice and foundational evidence
+- [02-data-sql-api](./02-data-sql-api/) — data, SQL and APIs
+- [03-automation](./03-automation/) — planned automation work
+- [04-rag-agents](./04-rag-agents/) — planned RAG, evaluation and agent work
+- [05-governance-architecture](./05-governance-architecture/) — planned governance and architecture work
+- [portfolio-projects](./portfolio-projects/) — planned integrated portfolio projects
+- [docs](./docs/) — supporting documentation
 
 ## Progress
-- Week 1 — Baseline & Foundations: completed
+
+- Block 1: completed
+- Block 2: active and not yet closed
+- Later blocks: planned only
