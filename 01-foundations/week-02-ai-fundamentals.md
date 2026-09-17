@@ -1,6 +1,6 @@
 # Block 2 — AI Fundamentals for Business
 
-**Status:** Active draft — Block 2 is not yet closed.
+**Status:** Evidence page complete for this task; Block 2 remains open pending the assessment retake and separate block review.
 
 ## Block goal
 
@@ -62,11 +62,27 @@ Portfolio artefact:
 
 - [When AI Is Not a Good Solution — reviewed draft v0.2](./when-ai-is-not-a-good-solution.md)
 
+## NIST MANAGE 1.1 and 2.1 decision check
+
+The [NIST AI RMF Playbook — MANAGE 1.1 and 2.1](https://airc.nist.gov/airmf-resources/playbook/manage/) sharpen the decision, rather than requiring another summary. **MANAGE 1.1** asks whether a proposed system meets its stated purpose and whether development or deployment should proceed, weighing benefits against negative risks and using evaluation evidence. **MANAGE 2.1** adds viable non-AI, manual or partly automated alternatives and the people and resources needed to manage risk.
+
+For each candidate use case, record the intended business outcome, the simplest adequate comparator, measurable benefit and failure criteria, likely negative impacts, the owner of review and fallback, and the cost of ongoing oversight. If these are unknown, the decision is **insufficient evidence**. If a simpler approach meets the objective with less risk or burden, choose it. Passing a paper checklist supports only a controlled pilot, never an unmeasured production GO.
+
+## Failure cases and controls
+
+The fictitious churn data-quality exercise demonstrates detection of five seeded errors; it does not test a trained model. In a real churn pilot, an invalid or late `churned` label could teach the wrong target; a field learned only after the prediction point would leak future information; missing values and inconsistent categories could distort segment results. The current controls are explicit data checks and a readiness review. Before deployment, a separate time-aware evaluation, segment and error analysis, business baseline, owner-approved thresholds, human review of retention actions and fallback would be needed.
+
 ## Evidence and claim status
 
 Completed exercise evidence is linked above. The one-pager is a reviewed consulting draft, not proof that a production system has been built or validated. No claims about model accuracy, business impact or deployment are made without measurements.
 
-The Block 2 assessment retake and remaining user learning tasks are still open. This page therefore remains an active draft and does not close Block 2.
+The first Block 2 assessment scored 6.5/10 against an 8/10 gate. Its retake and remaining learning tasks are open. This completed evidence page does not close Block 2 or claim independent mastery.
+
+## Remaining weak spots
+
+- Revisit solution choice when historical examples have reliable labels: the assessment's mail-routing case called for supervised multiclass classification before considering LLM + RAG.
+- Distinguish business, operational and system/model performance measures from controls or guardrails.
+- Specify model-behaviour and failure-case evidence before asserting LLM reliability. These are targets for the assessment retake, not claims of completed remediation.
 
 ## Lessons learned
 
