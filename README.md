@@ -36,7 +36,7 @@ Completed evidence, reviewed drafts and planned scope are labelled separately.
 ## Current evidence
 
 - [Block 1 — Baseline & Foundations](./01-foundations/week-01-evidence.md) — completed
-- [Block 2 — AI Fundamentals for Business](./01-foundations/week-02-ai-fundamentals.md) — in progress
+- [Block 2 — AI Fundamentals for Business](./01-foundations/week-02-ai-fundamentals.md) — completed learning block
 - [When AI Is Not a Good Solution](./01-foundations/when-ai-is-not-a-good-solution.md) — reviewed draft v0.2
 - [Data quality cases and Data readiness review v0.1](./02-data-sql-api/data-quality-cases.md) — completed exercise evidence
 
@@ -63,5 +63,6 @@ Completed evidence, reviewed drafts and planned scope are labelled separately.
 ## Progress
 
 - Block 1: completed
-- Block 2: active and not yet closed
+- Block 2: closed on 17 September 2026; formative assessment 6.5/10 with targeted follow-up areas
+- Block 3: authorised, earliest study day 18 September 2026; daily scope pending practical scheduling
 - Later blocks: planned only
