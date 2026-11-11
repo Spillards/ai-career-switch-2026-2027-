@@ -1,0 +1,1 @@
+run_id,phase,commit_sha,case_id,prompt_version,provider,model_variant,interface,run_at_iso8601,generation_settings,tools_and_grounding,attempt,run_status,sent_message_path,raw_response_path,error,task_score,output_score,evidence_score,total,failure_codes,severity,scoring_rationale
