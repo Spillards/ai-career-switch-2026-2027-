@@ -66,5 +66,5 @@ Completed evidence, reviewed drafts and planned scope are labelled separately.
 - Block 1: completed
 - Block 2: closed on 17 September 2026; formative assessment 6.5/10 with targeted follow-up areas
 - Block 3: authorised, earliest study day 18 September 2026; daily scope pending practical scheduling
-- Block 4: P02 protocol and scored demonstration published. Controlled model runs pending.
+- Block 4: P02 protocol, scored demonstration and live pilot published. Full controlled comparisons pending.
 - Further blocks: planned only

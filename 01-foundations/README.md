@@ -16,7 +16,7 @@ Foundational evidence from the first phase of the AI Career Switch 2026–2027.
 - [Block 1 — Baseline & Foundations](./week-01-evidence.md) — completed
 - [Block 2 — AI Fundamentals for Business](./week-02-ai-fundamentals.md) — active draft
 - [When AI Is Not a Good Solution](./when-ai-is-not-a-good-solution.md) — reviewed draft v0.2
-- [P02 — LLM Benchmark v0.1](./p02-llm-benchmark/) — change-request triage protocol and scored demonstration
+- [P02 — LLM Benchmark v0.1](./p02-llm-benchmark/) — change-request triage protocol, scored demonstration and live pilot
 
 The filenames retain their original `week-` prefix for link stability. The AI programme now uses content blocks of five actual study days.
 

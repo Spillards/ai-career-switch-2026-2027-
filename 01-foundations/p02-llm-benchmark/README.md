@@ -1,7 +1,7 @@
 # P02 — LLM Benchmark v0.1
 
 **Task:** Triage internal change requests.  
-**Evidence status:** Published protocol, ten synthetic test cases and a scored demonstration. Controlled model runs are pending.
+**Evidence status:** Published protocol, ten synthetic test cases, a scored demonstration and a four-response live pilot. Full controlled comparisons are pending.
 
 ## Business problem
 
@@ -13,14 +13,15 @@ The business hypothesis is faster intake with fewer clarification cycles. The be
 
 | Phase | Question | Setup | Status |
 | --- | --- | --- | --- |
-| A — Prompt comparison | What changes when the minimal baseline is replaced with the structured prompt? | TC01–TC10 × v0/v1, one fixed model and configuration, 20 runs. | Pending |
-| B — Model comparison | How do two model variants handle the same prompt on the Core cases? | TC01–TC05 × two models, fixed v1, 10 runs. | Pending |
+| A — Prompt comparison | What changes when the minimal baseline is replaced with the structured prompt? | TC01–TC10 × v0/v1, one fixed model and configuration, 20 runs. | TC01 pilot and TC03 v1 spot check published. Full set pending. |
+| B — Model comparison | How do two model variants handle the same prompt on the Core cases? | TC01–TC05 × two models, fixed v1, 10 runs. | TC01 cross-interface pilot published. Full set pending. |
 | D4 — Scoring demonstration | What does the rubric reveal about different kinds of errors? | TC01–TC05, ten constructed responses and one documented demonstration prompt. | Scored example set |
 
 The benchmark evaluates the combined v1 change: business rules, source constraints and a seven-field output contract. A controlled difference between v0 and v1 would measure that package. An experiment that isolates one instruction would require a separate comparison.
 
 - [Prompts, business rules and output contract](./prompts.md)
 - [Ten copyable synthetic inputs and expected behaviour](./test-cases.md)
+- [Live pilot results and limitations](./pilot-results.md) · [captured inputs and responses](./pilot-runs.json)
 - [Scored demonstration and failure cases](./demonstration.md)
 - [Run log template](./run-log-template.csv)
 
@@ -48,6 +49,8 @@ Use failure labels to describe concrete issues: **F-T** task, **F-C** format or 
 6. Report model, setup and sample scope with any conclusion. To review the published demonstration today, score the selected outputs in [the demonstration](./demonstration.md) against their stated inputs and compare your scoring with the recorded breakdown.
 
 ## Findings and limitations
+
+In the live pilot, ChatGPT Medium scored **1/6 with v0** and **6/6 with v1** on TC01. Gemini 3.1 Pro also scored **6/6** on TC01 with the identical v1 input. A separate ChatGPT v1 spot check correctly classified TC03 as an existing incident (**6/6**). This small pilot uses visible web configurations. The full comparisons and underlying model revisions are unverified.
 
 The constructed D4 responses scored **20/30 (SIM-A)** and **29/30 (SIM-B)**. The largest difference is grounding, **3/10 versus 10/10**. SIM-B has a marker error despite the higher total. The main failure to investigate in controlled runs is TC05: the response invents SharePoint and treats an incomplete request as ready for analysis.
 

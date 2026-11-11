@@ -1,0 +1,101 @@
+[
+  {
+    "run_id": "PILOT-01",
+    "fixture_commit": "39c041ad2a31d62dc2bc4bbeb23787ff277c3273",
+    "case_id": "TC01",
+    "prompt_version": "v0",
+    "provider": "OpenAI",
+    "model_display": "ChatGPT Medium",
+    "interface": "Safari web; fresh temporary chat",
+    "run_date": "2026-11-11",
+    "timezone": "Europe/Brussels",
+    "started_at": null,
+    "started_at_precision": "not retained",
+    "settings": "No tools manually selected. Backend model revision, sampling and automatic tool routing not exposed.",
+    "sent_message": "Classificeer deze request in de juiste categorie.\n\n--- BEGIN CHANGE REQUEST ---\nOperations verzoekt dat in hun Outlook de spamfilter beter functioneert zodat salesmedewerkers minder manueel moeten spam dienen te verwijderen met als resultaat minder spammails maar wel nog het correct ontvangen van de mails van onze leveranciers.\n--- END CHANGE REQUEST ---",
+    "response": "Categorie: Change Request – Functionele verbetering (Enhancement)\n\nSubcategorie: IT / E-mailbeheer / Spamfilteroptimalisatie (Microsoft Outlook).\n\nMotivatie: Operations vraagt om de bestaande spamfilter te verbeteren zodat salesmedewerkers minder tijd besteden aan het handmatig verwijderen van spam, terwijl legitieme e-mails van leveranciers correct blijven binnenkomen.\n\nType wijziging: Optimalisatie van bestaande functionaliteit, geen nieuwe functionaliteit of incidentmelding.\n\nBeoogd resultaat: Minder spam (false negatives), zonder dat leveranciersmails onterecht worden geblokkeerd (false positives).\n\nClassificatie: FUNCTIONAL_ENHANCEMENT",
+    "score": {
+      "T": 0,
+      "O": 0,
+      "E": 1,
+      "total": 1
+    },
+    "failure_codes": [
+      "F-T",
+      "F-C"
+    ],
+    "scoring_rationale": "The response uses an out-of-taxonomy category and omits the fixed fields. It retains the key request but infers that the work excludes new functionality."
+  },
+  {
+    "run_id": "PILOT-02",
+    "fixture_commit": "39c041ad2a31d62dc2bc4bbeb23787ff277c3273",
+    "case_id": "TC01",
+    "prompt_version": "v1",
+    "provider": "OpenAI",
+    "model_display": "ChatGPT Medium",
+    "interface": "Safari web; fresh temporary chat",
+    "run_date": "2026-11-11",
+    "timezone": "Europe/Brussels",
+    "started_at": "2026-11-11T20:33:00+01:00",
+    "started_at_precision": "second",
+    "settings": "No tools manually selected. Backend model revision, sampling and automatic tool routing not exposed.",
+    "sent_message": "Taak: Classificeer één change request in exact één van deze categorieën: ANALYSE-KLAAR, ONTBREKENDE INFORMATIE, INCIDENT I.P.V. CHANGE of MENSELIJKE REVIEW.\n\nContext: Gebruik exact de vier gegeven businessregels uit de BuCa, inclusief de volledige definitie van MENSELIJKE REVIEW: tegenstrijdige/gemengde signalen, zowel incident als change, of geen betrouwbare categorie mogelijk.\n\nInput: Eén change request in vrije tekst, eventueel aangevuld met naam, rol en afdeling van de stakeholder.\n\nConstraints: Voeg geen requirement, impact, oorzaak, prioriteit of feit toe dat niet expliciet door de request of toegestane stakeholdermetadata wordt ondersteund.\n\nStakeholdermetadata mag alleen dienen om de request te kaderen.\n\nOutputcontract:\nGeef steeds dezelfde velden terug: Categorie, Betrokken systeem/proces, Gewenste wijziging, Businessreden, Verwacht resultaat, Ontbrekende informatie, Reden menselijke review / incidentbeschrijving.\n\nVul een niet-beschikbaar of niet-relevant veld in met “NIET VAN TOEPASSING” of “Informatie ontbreekt” volgens de case; verzin niets.\n\nVoorbeelden/few-shot: nog niet toevoegen. Eerst v1 zonder voorbeelden benchmarken; pas few-shot testen als specifieke failure cases aantonen dat regels alleen onvoldoende zijn.\n\nVaste besliscategorieën en businessregels:\n\nANALYSE-KLAAR: De aanvraag bevat expliciet (1) betrokken systeem of proces, (2) gewenste wijziging, (3) businessreden en (4) verwacht resultaat. De informatie mag niet onderling tegenstrijdig zijn.\n\nONTBREKENDE INFORMATIE: Het is duidelijk dat een wijziging gevraagd wordt, maar minstens één van de vier verplichte elementen voor analyse-klaar ontbreekt.\n\nINCIDENT I.P.V. CHANGE: De tekst beschrijft vooral dat bestaande functionaliteit die voordien werkte nu faalt of degradeert, zonder duidelijke vraag om het bedoelde gedrag te wijzigen.\n\nMENSELIJKE REVIEW: Gebruik dit wanneer de aanvraag tegenstrijdige of gemengde signalen bevat, zowel incident als change lijkt te zijn, of wanneer op basis van de beschikbare informatie geen betrouwbare categorie gekozen kan worden.\n\n--- BEGIN CHANGE REQUEST ---\nOperations verzoekt dat in hun Outlook de spamfilter beter functioneert zodat salesmedewerkers minder manueel moeten spam dienen te verwijderen met als resultaat minder spammails maar wel nog het correct ontvangen van de mails van onze leveranciers.\n--- END CHANGE REQUEST ---",
+    "response": "Categorie: ANALYSE-KLAAR\n\nBetrokken systeem/proces: Outlook – spamfilter voor salesmedewerkers.\n\nGewenste wijziging: De spamfilter beter laten functioneren, zodat minder spammails handmatig verwijderd moeten worden.\n\nBusinessreden: Salesmedewerkers moeten momenteel te veel spammails manueel verwijderen.\n\nVerwacht resultaat: Minder spammails ontvangen, terwijl e-mails van leveranciers correct blijven binnenkomen.\n\nOntbrekende informatie: NIET VAN TOEPASSING\n\nReden menselijke review / incidentbeschrijving: NIET VAN TOEPASSING",
+    "score": {
+      "T": 2,
+      "O": 2,
+      "E": 2,
+      "total": 6
+    },
+    "failure_codes": [],
+    "scoring_rationale": "Uses the expected category and seven fields, identifies Sales as the beneficiary and preserves both outcomes."
+  },
+  {
+    "run_id": "PILOT-03",
+    "fixture_commit": "39c041ad2a31d62dc2bc4bbeb23787ff277c3273",
+    "case_id": "TC01",
+    "prompt_version": "v1",
+    "provider": "Google",
+    "model_display": "Gemini 3.1 Pro",
+    "interface": "Safari web; fresh temporary chat",
+    "run_date": "2026-11-11",
+    "timezone": "Europe/Brussels",
+    "started_at": null,
+    "started_at_precision": "not retained",
+    "settings": "No tools manually selected. Backend model revision, sampling and automatic tool routing not exposed.",
+    "sent_message": "Taak: Classificeer één change request in exact één van deze categorieën: ANALYSE-KLAAR, ONTBREKENDE INFORMATIE, INCIDENT I.P.V. CHANGE of MENSELIJKE REVIEW.\n\nContext: Gebruik exact de vier gegeven businessregels uit de BuCa, inclusief de volledige definitie van MENSELIJKE REVIEW: tegenstrijdige/gemengde signalen, zowel incident als change, of geen betrouwbare categorie mogelijk.\n\nInput: Eén change request in vrije tekst, eventueel aangevuld met naam, rol en afdeling van de stakeholder.\n\nConstraints: Voeg geen requirement, impact, oorzaak, prioriteit of feit toe dat niet expliciet door de request of toegestane stakeholdermetadata wordt ondersteund.\n\nStakeholdermetadata mag alleen dienen om de request te kaderen.\n\nOutputcontract:\nGeef steeds dezelfde velden terug: Categorie, Betrokken systeem/proces, Gewenste wijziging, Businessreden, Verwacht resultaat, Ontbrekende informatie, Reden menselijke review / incidentbeschrijving.\n\nVul een niet-beschikbaar of niet-relevant veld in met “NIET VAN TOEPASSING” of “Informatie ontbreekt” volgens de case; verzin niets.\n\nVoorbeelden/few-shot: nog niet toevoegen. Eerst v1 zonder voorbeelden benchmarken; pas few-shot testen als specifieke failure cases aantonen dat regels alleen onvoldoende zijn.\n\nVaste besliscategorieën en businessregels:\n\nANALYSE-KLAAR: De aanvraag bevat expliciet (1) betrokken systeem of proces, (2) gewenste wijziging, (3) businessreden en (4) verwacht resultaat. De informatie mag niet onderling tegenstrijdig zijn.\n\nONTBREKENDE INFORMATIE: Het is duidelijk dat een wijziging gevraagd wordt, maar minstens één van de vier verplichte elementen voor analyse-klaar ontbreekt.\n\nINCIDENT I.P.V. CHANGE: De tekst beschrijft vooral dat bestaande functionaliteit die voordien werkte nu faalt of degradeert, zonder duidelijke vraag om het bedoelde gedrag te wijzigen.\n\nMENSELIJKE REVIEW: Gebruik dit wanneer de aanvraag tegenstrijdige of gemengde signalen bevat, zowel incident als change lijkt te zijn, of wanneer op basis van de beschikbare informatie geen betrouwbare categorie gekozen kan worden.\n\n--- BEGIN CHANGE REQUEST ---\nOperations verzoekt dat in hun Outlook de spamfilter beter functioneert zodat salesmedewerkers minder manueel moeten spam dienen te verwijderen met als resultaat minder spammails maar wel nog het correct ontvangen van de mails van onze leveranciers.\n--- END CHANGE REQUEST ---",
+    "response": "Categorie: ANALYSE-KLAAR\nBetrokken systeem/proces: Outlook (spamfilter)\nGewenste wijziging: De spamfilter beter laten functioneren\nBusinessreden: Zodat salesmedewerkers minder manueel spam moeten verwijderen\nVerwacht resultaat: Minder spammails ontvangen, maar wel nog het correct ontvangen van de mails van leveranciers\nOntbrekende informatie: NIET VAN TOEPASSING\nReden menselijke review / incidentbeschrijving: NIET VAN TOEPASSING",
+    "score": {
+      "T": 2,
+      "O": 2,
+      "E": 2,
+      "total": 6
+    },
+    "failure_codes": [],
+    "scoring_rationale": "Uses the expected category and seven fields, identifies Sales as the beneficiary and preserves both outcomes."
+  },
+  {
+    "run_id": "PILOT-04",
+    "fixture_commit": "39c041ad2a31d62dc2bc4bbeb23787ff277c3273",
+    "case_id": "TC03",
+    "prompt_version": "v1",
+    "provider": "OpenAI",
+    "model_display": "ChatGPT Medium",
+    "interface": "Safari web; fresh temporary chat",
+    "run_date": "2026-11-11",
+    "timezone": "Europe/Brussels",
+    "started_at": null,
+    "started_at_precision": "not retained",
+    "settings": "No tools manually selected. Backend model revision, sampling and automatic tool routing not exposed.",
+    "sent_message": "Taak: Classificeer één change request in exact één van deze categorieën: ANALYSE-KLAAR, ONTBREKENDE INFORMATIE, INCIDENT I.P.V. CHANGE of MENSELIJKE REVIEW.\n\nContext: Gebruik exact de vier gegeven businessregels uit de BuCa, inclusief de volledige definitie van MENSELIJKE REVIEW: tegenstrijdige/gemengde signalen, zowel incident als change, of geen betrouwbare categorie mogelijk.\n\nInput: Eén change request in vrije tekst, eventueel aangevuld met naam, rol en afdeling van de stakeholder.\n\nConstraints: Voeg geen requirement, impact, oorzaak, prioriteit of feit toe dat niet expliciet door de request of toegestane stakeholdermetadata wordt ondersteund.\n\nStakeholdermetadata mag alleen dienen om de request te kaderen.\n\nOutputcontract:\nGeef steeds dezelfde velden terug: Categorie, Betrokken systeem/proces, Gewenste wijziging, Businessreden, Verwacht resultaat, Ontbrekende informatie, Reden menselijke review / incidentbeschrijving.\n\nVul een niet-beschikbaar of niet-relevant veld in met “NIET VAN TOEPASSING” of “Informatie ontbreekt” volgens de case; verzin niets.\n\nVoorbeelden/few-shot: nog niet toevoegen. Eerst v1 zonder voorbeelden benchmarken; pas few-shot testen als specifieke failure cases aantonen dat regels alleen onvoldoende zijn.\n\nVaste besliscategorieën en businessregels:\n\nANALYSE-KLAAR: De aanvraag bevat expliciet (1) betrokken systeem of proces, (2) gewenste wijziging, (3) businessreden en (4) verwacht resultaat. De informatie mag niet onderling tegenstrijdig zijn.\n\nONTBREKENDE INFORMATIE: Het is duidelijk dat een wijziging gevraagd wordt, maar minstens één van de vier verplichte elementen voor analyse-klaar ontbreekt.\n\nINCIDENT I.P.V. CHANGE: De tekst beschrijft vooral dat bestaande functionaliteit die voordien werkte nu faalt of degradeert, zonder duidelijke vraag om het bedoelde gedrag te wijzigen.\n\nMENSELIJKE REVIEW: Gebruik dit wanneer de aanvraag tegenstrijdige of gemengde signalen bevat, zowel incident als change lijkt te zijn, of wanneer op basis van de beschikbare informatie geen betrouwbare categorie gekozen kan worden.\n\n--- BEGIN CHANGE REQUEST ---\nFinance geeft aan dat hun viermaandelijkse back-up van de kwartaalcijfers niet op Y schijf is komen te staan zoals de gewoonte is. Deze is niet langer zichtbaar!\n--- END CHANGE REQUEST ---",
+    "response": "Categorie: INCIDENT I.P.V. CHANGE\n\nBetrokken systeem/proces: Viermaandelijkse back-up van de kwartaalcijfers van Finance op de Y-schijf.\n\nGewenste wijziging: NIET VAN TOEPASSING\n\nBusinessreden: NIET VAN TOEPASSING\n\nVerwacht resultaat: NIET VAN TOEPASSING\n\nOntbrekende informatie: NIET VAN TOEPASSING\n\nReden menselijke review / incidentbeschrijving: Finance meldt dat de viermaandelijkse back-up van de kwartaalcijfers niet meer zichtbaar is op de Y-schijf, waar deze gewoonlijk wordt opgeslagen. De melding beschrijft een afwijking van de bestaande werking, zonder expliciete vraag om het bedoelde gedrag te wijzigen.",
+    "score": {
+      "T": 2,
+      "O": 2,
+      "E": 2,
+      "total": 6
+    },
+    "failure_codes": [],
+    "scoring_rationale": "Recognises an existing incident, uses the seven fields and gives no unsupported technical cause."
+  }
+]
