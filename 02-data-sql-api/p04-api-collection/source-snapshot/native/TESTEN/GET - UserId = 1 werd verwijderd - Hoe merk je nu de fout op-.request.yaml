@@ -1,0 +1,10 @@
+$kind: http-request
+name: GET - UserId = 1 werd verwijderd - Hoe merk je nu de fout op?
+url: https://jsonplaceholder.typicode.com/posts?userId=
+method: GET
+queryParams:
+  - key: userId
+    value: ""
+    disabled: false
+    description: ""
+order: 1000

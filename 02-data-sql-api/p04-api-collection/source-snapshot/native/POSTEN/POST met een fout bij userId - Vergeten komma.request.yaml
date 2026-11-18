@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{base_url}}/posts"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "userId": 2
+      "title": "Oefenitem",
+      "body": "Dit is mijn eerste POST in Postman."
+    }
+order: 3000

@@ -1,0 +1,19 @@
+$kind: http-request
+name: De response bevat het verwachte post-ID - Bewuste fout in gebracht
+url: https://jsonplaceholder.typicode.com/posts/5
+method: GET
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test("De server retourneert 200 - Statuscheck", function () {
+        pm.response.to.have.status(200);
+      });
+      pm.test("Het antwoord is een JSON-object - Vormcheck", function () {
+        pm.expect(pm.response.json()).to.be.an("object");
+      });
+      pm.test("De response bevat post-ID 5 - Inhoudscheck", function () {
+        const post = pm.response.json();
+        pm.expect(post.id).to.eql(3);
+      });
+    language: text/javascript
+order: 4000

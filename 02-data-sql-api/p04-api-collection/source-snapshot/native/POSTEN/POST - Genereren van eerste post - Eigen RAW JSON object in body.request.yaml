@@ -1,0 +1,13 @@
+$kind: http-request
+name: POST - Genereren van eerste post / Eigen RAW JSON object in body
+url: "{{base_url}}/posts"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "userId": 2,
+      "title": "Oefenitem",
+      "body": "Dit is mijn eerste POST in Postman."
+    }
+order: 1000
