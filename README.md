@@ -68,5 +68,6 @@ Completed evidence, reviewed drafts and planned scope are labelled separately.
 - Block 2: closed on 17 September 2026; formative assessment 6.5/10 with targeted follow-up areas
 - Block 3: authorised, earliest study day 18 September 2026; daily scope pending practical scheduling
 - Block 4: P02 protocol, scored demonstration and live pilot published. Full controlled comparisons pending.
-- Block 5: HTTP/JSON/Postman learning gate passed, 9/10; P04 evidence published. Formal block review and next-block authorization remain separate.
-- Blocks 6 onward: planned only
+- Block 5: formally closed; HTTP/JSON/Postman learning gate passed, 9/10; [technical learning snapshot](./docs/block-05-http-json-postman.md) and P04 evidence published.
+- Block 6: Python-lite design and exercises prepared; learner execution and evidence remain pending.
+- Blocks 7 onward: planned only
