@@ -40,6 +40,7 @@ Completed evidence, reviewed drafts and planned scope are labelled separately.
 - [When AI Is Not a Good Solution](./01-foundations/when-ai-is-not-a-good-solution.md) — reviewed draft v0.2
 - [Data quality cases and Data readiness review v0.1](./02-data-sql-api/data-quality-cases.md) — completed exercise evidence
 - [P02 — LLM Benchmark v0.1](./01-foundations/p02-llm-benchmark/) — benchmark protocol and scored demonstration
+- [P04 — HTTP API collection v0.1](./02-data-sql-api/p04-api-collection/) — Block 5 gate 9/10; saved requests, failure cases, portable collection and verification
 
 ## Skills being developed
 
@@ -67,4 +68,5 @@ Completed evidence, reviewed drafts and planned scope are labelled separately.
 - Block 2: closed on 17 September 2026; formative assessment 6.5/10 with targeted follow-up areas
 - Block 3: authorised, earliest study day 18 September 2026; daily scope pending practical scheduling
 - Block 4: P02 protocol, scored demonstration and live pilot published. Full controlled comparisons pending.
-- Further blocks: planned only
+- Block 5: HTTP/JSON/Postman learning gate passed, 9/10; P04 evidence published. Formal block review and next-block authorization remain separate.
+- Blocks 6 onward: planned only

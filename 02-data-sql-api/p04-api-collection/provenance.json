@@ -1,0 +1,178 @@
+{
+  "date": "2026-11-18",
+  "format": "Postman Collection v2.1",
+  "prepared_by": "ChatGPT from learner files and submitted run notes",
+  "changes": [
+    "Set portable collection base_url explicitly; source definition had an empty value.",
+    "Normalize API URLs to collection variable; preserve saved assertion code.",
+    "Give duplicate/long request names stable display labels.",
+    "Reconstruct two comments requests from submitted transfer notes; saved Comment request still targeted /posts/1.",
+    "Exclude Pages files and workspace/environment/global settings."
+  ],
+  "source_files": [
+    {
+      "path": "source-snapshot/native/.resources/definition.yaml",
+      "sha256": "67946350285b178a5a2c63715ac79f8e9c644a4006d4566f983a49f7564a7020"
+    },
+    {
+      "path": "source-snapshot/native/LEZEN-1/.resources/definition.yaml",
+      "sha256": "7b82416b2001e990d1d45580ce2ed89290977c0834887560ed272c282e750aa6"
+    },
+    {
+      "path": "source-snapshot/native/LEZEN-1/GET - ALLE objecten met gebruik van een base_url variabele.request.yaml",
+      "sha256": "01cbdf74c9a6ef67ca941c88cbce5c096fefc9a5cbe0abde6961d9e0de36efd8"
+    },
+    {
+      "path": "source-snapshot/native/LEZEN-1/GET - Alle objecten van user 1 - Queryvariabele userId = 1 gebru.request.yaml",
+      "sha256": "cfd3baf8054aee58f879d8618685f17e29fc09789b1e8a73a19bbd1def55fb03"
+    },
+    {
+      "path": "source-snapshot/native/LEZEN-1/GET - Alle objecten van user 1 - Queryvariabele userId = 2 gebru.request.yaml",
+      "sha256": "96ff74b3cee71b59f1ea850491ed52394ff17d6b120c163a10b8427a72dc188e"
+    },
+    {
+      "path": "source-snapshot/native/LEZEN-1/GET - Alle objecten van user 1 - Queryvariabele userId = 99999 g.request.yaml",
+      "sha256": "93ae9edfda6894deef22bf5588995caf13e2c726f000481b0de56146733c8e8c"
+    },
+    {
+      "path": "source-snapshot/native/LEZEN-1/GET - Allereerste object - Ook base_url gebruikt.request.yaml",
+      "sha256": "e8034bee91c5b84208a8cc24f7b8934e89ac651786918ac3ed9e18c42446ad7c"
+    },
+    {
+      "path": "source-snapshot/native/LEZEN-1/GET - Eerste verzoek met een HTTP variabele.request.yaml",
+      "sha256": "4b3662f1599e3df06cf432ca73e490e3c6fabb0efdd69e49de40296cb4092314"
+    },
+    {
+      "path": "source-snapshot/native/LEZEN-1/GET - Kan ID 101 niet opvragen na aanmaak object in vorige POST.request.yaml",
+      "sha256": "6d593c00a4cd92e329bb66edc1c0f344afd624deae2829af969a282ed79a6623"
+    },
+    {
+      "path": "source-snapshot/native/LEZEN-1/GET - Tweede verzoek met API variabele.request.yaml",
+      "sha256": "5732d70edfd17cc6e3210484cd03f80c6c4dd0626feb7d289d8d4dab2a5133ad"
+    },
+    {
+      "path": "source-snapshot/native/LEZEN-1/GET- ID 101 proberen op te halen terug.request.yaml",
+      "sha256": "3e206f2f3b9ecaf1a69d728aadeb3334a10a34b721862ed27509a94858cb9136"
+    },
+    {
+      "path": "source-snapshot/native/POSTEN/.resources/definition.yaml",
+      "sha256": "441b46b396acb31b2da9a1d7b0dc26db986eef08105db9535e3026ce025b56af"
+    },
+    {
+      "path": "source-snapshot/native/POSTEN/POST - Genereren van eerste post - Eigen RAW JSON object in body-1.request.yaml",
+      "sha256": "a061f8ee880d7572c01323f20b2a80d98cf01aa04e939ab2b9175e6e3d689b4c"
+    },
+    {
+      "path": "source-snapshot/native/POSTEN/POST - Genereren van eerste post - Eigen RAW JSON object in body.request.yaml",
+      "sha256": "6244e37652ceda057bf02cb84bb15a7e5821bf9b8b20df4d5d8066de8439be10"
+    },
+    {
+      "path": "source-snapshot/native/POSTEN/POST met een fout bij userId - Tekst ipv numeriek.request.yaml",
+      "sha256": "df27d4cba627c84c608c10238367d4762ffa29fe137b4400f6b3fe41c3154e56"
+    },
+    {
+      "path": "source-snapshot/native/POSTEN/POST met een fout bij userId - Vergeten komma.request.yaml",
+      "sha256": "b4a3d1e1daa50e6d083e5a75c466069fe72176a0d6832b9a5f2549e7f15b4152"
+    },
+    {
+      "path": "source-snapshot/native/TESTEN/.resources/definition.yaml",
+      "sha256": "575caafc4605e38b8e0d996cc136c7c3cd57f1ee71c9c027a93ef4540984fbcf"
+    },
+    {
+      "path": "source-snapshot/native/TESTEN/De response bevat het verwachte post-ID - Bewuste fout in gebrac.request.yaml",
+      "sha256": "98c8a9078fdeae0f56f8fa70fc54a4647e56b1074098070b19174abc268f2aed"
+    },
+    {
+      "path": "source-snapshot/native/TESTEN/Eerste automatische testen op status - vorm - inhoud.request.yaml",
+      "sha256": "ba601becc53f9f45c052a8bcddeecfc11d23a3bd6dd8b75fe9149d3a101bc999"
+    },
+    {
+      "path": "source-snapshot/native/TESTEN/GET - Comment op post-ID 1.request.yaml",
+      "sha256": "c89abe629bbfa0a48676cfdf9707076d2c559f32ccd6c261d4dcce5b2f8b3a2e"
+    },
+    {
+      "path": "source-snapshot/native/TESTEN/GET - Onbekende Id opgezocht ( 105 ).request.yaml",
+      "sha256": "44c6c9a52536edef5c6c48268dcbee26b5f1edf8d937f8f29dc111ffbee30c45"
+    },
+    {
+      "path": "source-snapshot/native/TESTEN/GET - Onbestaande post-ID.request.yaml",
+      "sha256": "fbb611f8ecbc42546d848cf2eb64e48b192fe348005f44824a0acb0166c0f0be"
+    },
+    {
+      "path": "source-snapshot/native/TESTEN/GET - UserId = 1 werd verwijderd - Hoe merk je nu de fout op-.request.yaml",
+      "sha256": "4eeccbbcc67638f58603ad2fc60e68cc623c11044f63350640ccc5afb983e094"
+    },
+    {
+      "path": "source-snapshot/native/TESTEN/GET met userId 99999 - De response is een lege JSON-array.request.yaml",
+      "sha256": "5dc517c96e2998706201829675b15dbb84758da54b5b264dfcbd63081830fcb6"
+    },
+    {
+      "path": "source-snapshot/native/TESTEN/Vergelijk twee foutdetecties - I.request.yaml",
+      "sha256": "34cffd3bd43ce6a7b44e9e5e8ab75c5c790d9ff50c94ebaeea2fb7f57d94d34e"
+    },
+    {
+      "path": "source-snapshot/native/TESTEN/Vergelijk twee foutdetecties - II.request.yaml",
+      "sha256": "44b8711ee4cc373eb526bd5e346f8b3926f516e60b97baee5fca43980cbf24f2"
+    }
+  ],
+  "requests": [
+    {
+      "name": "01 Detail post 5",
+      "source": "source-snapshot/native/TESTEN/Eerste automatische testen op status - vorm - inhoud.request.yaml",
+      "origin": "converted saved request",
+      "assertions_preserved": true
+    },
+    {
+      "name": "02 Posts filtered by user 1",
+      "source": "source-snapshot/native/TESTEN/Vergelijk twee foutdetecties - I.request.yaml",
+      "origin": "converted saved request",
+      "assertions_preserved": true
+    },
+    {
+      "name": "03 Valid empty list",
+      "source": "source-snapshot/native/TESTEN/GET met userId 99999 - De response is een lege JSON-array.request.yaml",
+      "origin": "converted saved request",
+      "assertions_preserved": true
+    },
+    {
+      "name": "04 Missing post 225",
+      "source": "source-snapshot/native/TESTEN/GET - Onbestaande post-ID.request.yaml",
+      "origin": "converted saved request",
+      "assertions_preserved": true
+    },
+    {
+      "name": "05 Simulated create",
+      "source": "source-snapshot/native/POSTEN/POST - Genereren van eerste post - Eigen RAW JSON object in body-1.request.yaml",
+      "origin": "converted saved request",
+      "assertions_preserved": true
+    },
+    {
+      "name": "06 Read simulated post 101",
+      "source": "source-snapshot/native/LEZEN-1/GET - Kan ID 101 niet opvragen na aanmaak object in vorige POST.request.yaml",
+      "origin": "converted saved request",
+      "assertions_preserved": true
+    },
+    {
+      "name": "07 Intentional wrong ID expectation",
+      "source": "source-snapshot/native/TESTEN/De response bevat het verwachte post-ID - Bewuste fout in gebrac.request.yaml",
+      "origin": "converted saved request",
+      "assertions_preserved": true
+    },
+    {
+      "name": "08 Intentional missing filter",
+      "source": "source-snapshot/native/TESTEN/Vergelijk twee foutdetecties - II.request.yaml",
+      "origin": "converted saved request",
+      "assertions_preserved": true
+    },
+    {
+      "name": "09 Comments on post 1",
+      "origin": "reconstructed from submitted D5 notes",
+      "saved_source_mismatch": "source-snapshot/native/TESTEN/GET - Comment op post-ID 1.request.yaml targets /posts/1"
+    },
+    {
+      "name": "10 Comments boundary post 101",
+      "origin": "reconstructed from submitted D5 notes",
+      "saved_source_mismatch": "source-snapshot/native/TESTEN/GET - Comment op post-ID 1.request.yaml targets /posts/1"
+    }
+  ]
+}

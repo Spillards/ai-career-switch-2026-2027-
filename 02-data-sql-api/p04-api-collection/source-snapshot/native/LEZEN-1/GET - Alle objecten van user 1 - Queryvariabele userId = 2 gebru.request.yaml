@@ -1,0 +1,10 @@
+$kind: http-request
+name: GET - Alle objecten van user 1 - Queryvariabele userId = 2 gebruikt
+url: https://jsonplaceholder.typicode.com/posts?userId=2
+method: GET
+queryParams:
+  - key: userId
+    value: "2"
+    disabled: false
+    description: ""
+order: 10000

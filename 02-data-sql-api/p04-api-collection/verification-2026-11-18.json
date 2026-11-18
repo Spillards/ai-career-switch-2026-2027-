@@ -1,0 +1,317 @@
+{
+  "checked_at": "2026-11-18T18:39:50.988Z",
+  "runner": "ChatGPT via Node fetch; saved Postman scripts executed with node:vm and a minimal assertion compatibility adapter. Cross-context object prototypes normalized before deep equality. Not the Postman/Newman runtime or a GUI import test.",
+  "collection_structure": "JSON parsed; v2.1 required top-level fields, 10 requests, URLs, variable and script provenance checked; no full JSON Schema validator used.",
+  "results": [
+    {
+      "request": "01 Detail post 5",
+      "method": "GET",
+      "url": "https://jsonplaceholder.typicode.com/posts/5",
+      "status": 200,
+      "response_summary": {
+        "type": "object",
+        "keys": [
+          "userId",
+          "id",
+          "title",
+          "body"
+        ],
+        "id": 5,
+        "userId": 1
+      },
+      "tests": [
+        {
+          "name": "De server retourneert 200 - Statuscheck",
+          "result": "PASS"
+        },
+        {
+          "name": "Het antwoord is een JSON-object - Vormcheck",
+          "result": "PASS"
+        },
+        {
+          "name": "De response bevat post-ID 5 - Inhoudscheck",
+          "result": "PASS"
+        }
+      ],
+      "additional_verification": []
+    },
+    {
+      "request": "02 Posts filtered by user 1",
+      "method": "GET",
+      "url": "https://jsonplaceholder.typicode.com/posts/?userId=1",
+      "status": 200,
+      "response_summary": {
+        "type": "array",
+        "count": 10,
+        "first_ids": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "userIds": [
+          1
+        ],
+        "postIds": []
+      },
+      "tests": [
+        {
+          "name": "De server retourneert 200 - Statuscheck",
+          "result": "PASS"
+        },
+        {
+          "name": "Alle teruggegeven posts hebben userId 1",
+          "result": "PASS"
+        }
+      ],
+      "additional_verification": []
+    },
+    {
+      "request": "03 Valid empty list",
+      "method": "GET",
+      "url": "https://jsonplaceholder.typicode.com/posts?userId=99999",
+      "status": 200,
+      "response_summary": {
+        "type": "array",
+        "count": 0,
+        "first_ids": [],
+        "userIds": [],
+        "postIds": []
+      },
+      "tests": [
+        {
+          "name": "De server retourneert 200 - Statuscheck",
+          "result": "PASS"
+        },
+        {
+          "name": "De geretourneerde post heeft userId 99999 en is leeg",
+          "result": "PASS"
+        }
+      ],
+      "additional_verification": []
+    },
+    {
+      "request": "04 Missing post 225",
+      "method": "GET",
+      "url": "https://jsonplaceholder.typicode.com/posts/225",
+      "status": 404,
+      "response_summary": {
+        "type": "object",
+        "keys": []
+      },
+      "tests": [
+        {
+          "name": "De server retourneert 404 - Statuscheck",
+          "result": "PASS"
+        },
+        {
+          "name": "De response bevat een leeg object - Inhoudscheck",
+          "result": "PASS"
+        }
+      ],
+      "additional_verification": []
+    },
+    {
+      "request": "05 Simulated create",
+      "method": "POST",
+      "url": "https://jsonplaceholder.typicode.com/posts",
+      "status": 201,
+      "response_summary": {
+        "type": "object",
+        "keys": [
+          "userId",
+          "title",
+          "body",
+          "id"
+        ],
+        "id": 101,
+        "userId": 11
+      },
+      "tests": [],
+      "additional_verification": [
+        {
+          "name": "POST status and submitted fields",
+          "result": "PASS",
+          "origin": "assistant verification; original POST had manual checks"
+        }
+      ]
+    },
+    {
+      "request": "06 Read simulated post 101",
+      "method": "GET",
+      "url": "https://jsonplaceholder.typicode.com/posts/101",
+      "status": 404,
+      "response_summary": {
+        "type": "object",
+        "keys": []
+      },
+      "tests": [],
+      "additional_verification": [
+        {
+          "name": "Simulated item is not persisted",
+          "result": "PASS",
+          "origin": "assistant verification"
+        }
+      ]
+    },
+    {
+      "request": "07 Intentional wrong ID expectation",
+      "method": "GET",
+      "url": "https://jsonplaceholder.typicode.com/posts/5",
+      "status": 200,
+      "response_summary": {
+        "type": "object",
+        "keys": [
+          "userId",
+          "id",
+          "title",
+          "body"
+        ],
+        "id": 5,
+        "userId": 1
+      },
+      "tests": [
+        {
+          "name": "De server retourneert 200 - Statuscheck",
+          "result": "PASS"
+        },
+        {
+          "name": "Het antwoord is een JSON-object - Vormcheck",
+          "result": "PASS"
+        },
+        {
+          "name": "De response bevat post-ID 5 - Inhoudscheck",
+          "result": "FAIL",
+          "error": "Expected values to be strictly deep-equal:\n\n5 !== 3\n"
+        }
+      ],
+      "additional_verification": []
+    },
+    {
+      "request": "08 Intentional missing filter",
+      "method": "GET",
+      "url": "https://jsonplaceholder.typicode.com/posts/",
+      "status": 200,
+      "response_summary": {
+        "type": "array",
+        "count": 100,
+        "first_ids": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "userIds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "postIds": []
+      },
+      "tests": [
+        {
+          "name": "De server retourneert 200 - Statuscheck",
+          "result": "PASS"
+        },
+        {
+          "name": "Alle teruggegeven posts hebben userId 1",
+          "result": "FAIL",
+          "error": "Expected values to be strictly deep-equal:\n\nfalse !== true\n"
+        }
+      ],
+      "additional_verification": []
+    },
+    {
+      "request": "09 Comments on post 1",
+      "method": "GET",
+      "url": "https://jsonplaceholder.typicode.com/comments?postId=1",
+      "status": 200,
+      "response_summary": {
+        "type": "array",
+        "count": 5,
+        "first_ids": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "userIds": [],
+        "postIds": [
+          1
+        ]
+      },
+      "tests": [],
+      "additional_verification": [
+        {
+          "name": "Nonempty comments list, every postId equals 1",
+          "result": "PASS",
+          "origin": "assistant verification of reconstructed request"
+        }
+      ]
+    },
+    {
+      "request": "10 Comments boundary post 101",
+      "method": "GET",
+      "url": "https://jsonplaceholder.typicode.com/comments?postId=101",
+      "status": 200,
+      "response_summary": {
+        "type": "array",
+        "count": 0,
+        "first_ids": [],
+        "userIds": [],
+        "postIds": []
+      },
+      "tests": [],
+      "additional_verification": [
+        {
+          "name": "No comments found for postId 101",
+          "result": "PASS",
+          "origin": "assistant verification of reconstructed request"
+        }
+      ]
+    },
+    {
+      "request": "01 Detail post 5",
+      "method": "GET",
+      "url": "https://jsonplaceholder.typicode.com/posts/5",
+      "status": 200,
+      "response_summary": {
+        "type": "object",
+        "keys": [
+          "userId",
+          "id",
+          "title",
+          "body"
+        ],
+        "id": 5,
+        "userId": 1
+      },
+      "tests": [
+        {
+          "name": "De server retourneert 200 - Statuscheck",
+          "result": "PASS"
+        },
+        {
+          "name": "Het antwoord is een JSON-object - Vormcheck",
+          "result": "PASS"
+        },
+        {
+          "name": "De response bevat post-ID 5 - Inhoudscheck",
+          "result": "PASS"
+        }
+      ],
+      "additional_verification": [],
+      "phase": "Recovery after intentional failures"
+    }
+  ]
+}

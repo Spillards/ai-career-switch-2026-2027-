@@ -1,0 +1,262 @@
+{
+  "info": {
+    "name": "P04 — API collection v0.1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "HTTP/JSON/Postman learning evidence. Core requests are separate from intentional failures. See README.md and provenance.json."
+  },
+  "auth": {
+    "type": "noauth"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://jsonplaceholder.typicode.com",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Core",
+      "item": [
+        {
+          "name": "01 Detail post 5",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/posts/5",
+            "description": "Converted from source-snapshot/native/TESTEN/Eerste automatische testen op status - vorm - inhoud.request.yaml. Assertion code preserved."
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"De server retourneert 200 - Statuscheck\", function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Het antwoord is een JSON-object - Vormcheck\", function () {",
+                  "  pm.expect(pm.response.json()).to.be.an(\"object\");",
+                  "});",
+                  "pm.test(\"De response bevat post-ID 5 - Inhoudscheck\", function () {",
+                  "  const post = pm.response.json();",
+                  "  pm.expect(post.id).to.eql(5);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "02 Posts filtered by user 1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/posts/?userId=1",
+            "description": "Converted from source-snapshot/native/TESTEN/Vergelijk twee foutdetecties - I.request.yaml. Assertion code preserved."
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"De server retourneert 200 - Statuscheck\", function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Alle teruggegeven posts hebben userId 1\", function () {",
+                  "  const posts = pm.response.json();",
+                  "",
+                  "  pm.expect(posts).to.be.an(\"array\").that.is.not.empty;",
+                  "  pm.expect(posts.every(post => post.userId === 1)).to.eql(true);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "03 Valid empty list",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/posts?userId=99999",
+            "description": "Converted from source-snapshot/native/TESTEN/GET met userId 99999 - De response is een lege JSON-array.request.yaml. Assertion code preserved."
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"De server retourneert 200 - Statuscheck\", function () {",
+                  "pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"De geretourneerde post heeft userId 99999 en is leeg\", function () {",
+                  "const post = pm.response.json();",
+                  "",
+                  "pm.expect(post).to.be.an(\"array\").that.is.empty;",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "04 Missing post 225",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/posts/225",
+            "description": "Converted from source-snapshot/native/TESTEN/GET - Onbestaande post-ID.request.yaml. Assertion code preserved."
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"De server retourneert 404 - Statuscheck\", function () {",
+                  "  pm.response.to.have.status(404);",
+                  "});",
+                  "",
+                  "pm.test(\"De response bevat een leeg object - Inhoudscheck\", function () {",
+                  "  const post = pm.response.json();",
+                  "  pm.expect(post).to.deep.eql({});",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "05 Simulated create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{base_url}}/posts",
+            "description": "Converted from source-snapshot/native/POSTEN/POST - Genereren van eerste post - Eigen RAW JSON object in body-1.request.yaml. Assertion code preserved.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": 11,\n  \"title\": \"Carriereswitch\",\n  \"body\": \"Ik word AI consultant in 2027.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "06 Read simulated post 101",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/posts/101",
+            "description": "Converted from source-snapshot/native/LEZEN-1/GET - Kan ID 101 niet opvragen na aanmaak object in vorige POST.request.yaml. Assertion code preserved."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Intentional failures — expected FAIL",
+      "item": [
+        {
+          "name": "07 Intentional wrong ID expectation",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/posts/5",
+            "description": "Converted from source-snapshot/native/TESTEN/De response bevat het verwachte post-ID - Bewuste fout in gebrac.request.yaml. Assertion code preserved."
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"De server retourneert 200 - Statuscheck\", function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Het antwoord is een JSON-object - Vormcheck\", function () {",
+                  "  pm.expect(pm.response.json()).to.be.an(\"object\");",
+                  "});",
+                  "pm.test(\"De response bevat post-ID 5 - Inhoudscheck\", function () {",
+                  "  const post = pm.response.json();",
+                  "  pm.expect(post.id).to.eql(3);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "08 Intentional missing filter",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/posts/",
+            "description": "Converted from source-snapshot/native/TESTEN/Vergelijk twee foutdetecties - II.request.yaml. Assertion code preserved."
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"De server retourneert 200 - Statuscheck\", function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Alle teruggegeven posts hebben userId 1\", function () {",
+                  "  const posts = pm.response.json();",
+                  "",
+                  "  pm.expect(posts).to.be.an(\"array\").that.is.not.empty;",
+                  "  pm.expect(posts.every(post => post.userId === 1)).to.eql(true);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Transfer — reconstructed from notes",
+      "item": [
+        {
+          "name": "09 Comments on post 1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/comments?postId=1",
+            "description": "Reconstructed by ChatGPT from the learner’s submitted D5 transfer notes. No saved comments URL or original response export was available. Manual status/shape/content check; no learner-authored script claimed."
+          },
+          "response": []
+        },
+        {
+          "name": "10 Comments boundary post 101",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/comments?postId=101",
+            "description": "Reconstructed by ChatGPT from the learner’s submitted D5 transfer notes. No saved comments URL or original response export was available. Manual status/shape/content check; no learner-authored script claimed."
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

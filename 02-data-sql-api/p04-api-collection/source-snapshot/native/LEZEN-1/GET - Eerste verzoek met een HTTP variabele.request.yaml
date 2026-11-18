@@ -1,0 +1,6 @@
+$kind: http-request
+url: https://postman-echo.com/get?topic=http
+method: GET
+queryParams:
+  topic: http
+order: 1000
